@@ -155,7 +155,7 @@ boss-vs-data-engineer/
 
 ```bash
 # 1. Get the code, then go into this week's folder
-git clone <paste the URL from the green "Code" button on the repo page>
+git clone https://github.com/LarVinchi/boss-vs-data-engineer.git
 cd boss-vs-data-engineer/week-01-fibre-incidents
 
 # 2. Create and activate a virtual environment

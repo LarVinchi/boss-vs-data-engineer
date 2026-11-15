@@ -1,0 +1,13 @@
+ticket_id,opened_at,closed_at,location,severity,cause,customers_affected,reported_by
+S-0001,2026-10-02 03:53,2026-10-02 05:41,Palm Estate,P1,Backhaul fibre damaged,128,NOC
+S-0002,2026-10-02 09:24,2026-10-02 10:58,Harbour Point Phase 1,P3,Power failure,110,NOC
+S-0003,2026-10-02 16:27,2026-10-02 19:34,Central Business Park,P2,Weather damage,136,NOC
+S-0004,2026-10-03 04:41,2026-10-03 11:21,North Ridge,P3,Equipment fault,70,NOC
+S-0005,2026-10-03 12:00,2026-10-03 14:54,Central Business Park,P2,Equipment fault - OLT card,137,NOC
+S-0006,2026-10-08 16:53,2026-10-08 18:00,Harbour Point Phase 2,P1,Fibre cut - third party excavation,87,NOC
+S-0007,2026-10-08 21:41,2026-10-08 22:25,Palm Estate,P2,Power failure at cabinet,130,NOC
+S-0008,2026-10-12 01:53,2026-10-12 02:31,Harbour Point Phase 2,P3,Power failure,87,NOC
+S-0009,2026-10-12 17:52,2026-10-13 07:46,Station Road,P2,Weather damage,57,NOC
+S-0010,2026-10-13 08:08,2026-10-13 09:13,Central Business Park,P2,Power failure at cabinet,146,NOC
+S-0011,2026-10-13 08:27,2026-10-13 10:20,Riverside Close,P1,Backhaul fibre damaged,60,NOC
+S-0012,2026-10-13 11:02,2026-10-13 12:08,Central Business Park,P2,Equipment fault - OLT card,146,NOC

@@ -1,0 +1,746 @@
+[
+ {
+  "alarm_id": "ALM-000015",
+  "device_id": "HP2-OLT-01",
+  "site_code": "HP2",
+  "severity": 3,
+  "raised_at": "2026-10-12T00:53:00Z",
+  "cleared_at": "2026-10-12T01:31:00Z"
+ },
+ {
+  "alarm_id": "ALM-000072",
+  "device_id": "GV-ONT-C1",
+  "site_code": "GV",
+  "severity": 4,
+  "raised_at": "2026-10-22T14:56:00Z",
+  "cleared_at": "2026-10-22T14:59:00Z"
+ },
+ {
+  "alarm_id": "ALM-000040",
+  "device_id": "SR-OLT-01",
+  "site_code": "SR",
+  "severity": 2,
+  "raised_at": "2026-10-28T13:07:00Z",
+  "cleared_at": "2026-10-28T14:58:00Z"
+ },
+ {
+  "alarm_id": "ALM-000074",
+  "device_id": "SR-ONT-C2",
+  "site_code": "SR",
+  "severity": 4,
+  "raised_at": "2026-10-09T04:34:00Z",
+  "cleared_at": "2026-10-09T04:38:00Z"
+ },
+ {
+  "alarm_id": "ALM-000081",
+  "device_id": "NR-ONT-C1",
+  "site_code": "NR",
+  "severity": 3,
+  "raised_at": "2026-10-12T09:40:00Z",
+  "cleared_at": "2026-10-12T09:41:00Z"
+ },
+ {
+  "alarm_id": "ALM-000046",
+  "device_id": "NR-OLT-01",
+  "site_code": "NR",
+  "severity": 2,
+  "raised_at": "2026-10-31T07:59:00Z",
+  "cleared_at": null
+ },
+ {
+  "alarm_id": "ALM-000039",
+  "device_id": "PE-OLT-01",
+  "site_code": "PE",
+  "severity": 1,
+  "raised_at": "2026-10-27T05:38:00Z",
+  "cleared_at": "2026-10-27T06:30:00Z"
+ },
+ {
+  "alarm_id": "ALM-000014",
+  "device_id": "RC-OLT-01",
+  "site_code": "RC",
+  "severity": 2,
+  "raised_at": "2026-10-08T22:22:00Z",
+  "cleared_at": "2026-10-09T02:52:00Z"
+ },
+ {
+  "alarm_id": "ALM-000030",
+  "device_id": "HP1-OLT-01",
+  "site_code": "HP1",
+  "severity": 3,
+  "raised_at": "2026-10-20T06:56:00Z",
+  "cleared_at": "2026-10-20T08:26:00Z"
+ },
+ {
+  "alarm_id": "ALM-000069",
+  "device_id": "RC-ONT-C3",
+  "site_code": "RC",
+  "severity": 4,
+  "raised_at": "2026-10-13T19:50:00Z",
+  "cleared_at": "2026-10-13T19:51:00Z"
+ },
+ {
+  "alarm_id": "ALM-000060",
+  "device_id": "SR-ONT-C4",
+  "site_code": "SR",
+  "severity": 4,
+  "raised_at": "2026-10-18T04:57:00Z",
+  "cleared_at": "2026-10-18T05:00:00Z"
+ },
+ {
+  "alarm_id": "ALM-000036",
+  "device_id": "SR-OLT-01",
+  "site_code": "SR",
+  "severity": 3,
+  "raised_at": "2026-10-24T03:37:00Z",
+  "cleared_at": "2026-10-24T06:46:00Z"
+ },
+ {
+  "alarm_id": "ALM-000050",
+  "device_id": "RC-ONT-C4",
+  "site_code": "RC",
+  "severity": 3,
+  "raised_at": "2026-10-23T20:42:00Z",
+  "cleared_at": "2026-10-23T20:44:00Z"
+ },
+ {
+  "alarm_id": "ALM-000037",
+  "device_id": "SR-ONT-C3",
+  "site_code": "SR",
+  "severity": 3,
+  "raised_at": "2026-10-24T03:42:00Z",
+  "cleared_at": "2026-10-24T06:39:00Z"
+ },
+ {
+  "alarm_id": "ALM-000007",
+  "device_id": "CBP-ONT-C3",
+  "site_code": "CBP",
+  "severity": 2,
+  "raised_at": "2026-10-03T11:10:00Z",
+  "cleared_at": "2026-10-03T13:54:00Z"
+ },
+ {
+  "alarm_id": "ALM-000076",
+  "device_id": "HP2-ONT-C1",
+  "site_code": "HP2",
+  "severity": 4,
+  "raised_at": "2026-10-07T18:07:00Z",
+  "cleared_at": "2026-10-07T18:08:00Z"
+ },
+ {
+  "alarm_id": "ALM-000053",
+  "device_id": "PE-ONT-C2",
+  "site_code": "PE",
+  "severity": 4,
+  "raised_at": "2026-10-06T22:21:00Z",
+  "cleared_at": "2026-10-06T22:25:00Z"
+ },
+ {
+  "alarm_id": "ALM-000021",
+  "device_id": "PE-ONT-C2",
+  "site_code": "PE",
+  "severity": 3,
+  "raised_at": "2026-10-15T06:59:00Z",
+  "cleared_at": "2026-10-15T17:53:00Z"
+ },
+ {
+  "alarm_id": "ALM-000042",
+  "device_id": "PE-OLT-01",
+  "site_code": "PE",
+  "severity": 1,
+  "raised_at": "2026-10-29T00:15:00Z",
+  "cleared_at": "2026-10-29T15:01:00Z"
+ },
+ {
+  "alarm_id": "ALM-000011",
+  "device_id": "HP2-ONT-C3",
+  "site_code": "HP2",
+  "severity": 1,
+  "raised_at": "2026-10-08T16:01:00Z",
+  "cleared_at": "2026-10-08T16:54:00Z"
+ },
+ {
+  "alarm_id": "ALM-000008",
+  "device_id": "HP2-OLT-01",
+  "site_code": "HP2",
+  "severity": 3,
+  "raised_at": "2026-10-04T19:46:00Z",
+  "cleared_at": "2026-10-04T20:54:00Z"
+ },
+ {
+  "alarm_id": "ALM-000029",
+  "device_id": "GV-OLT-01",
+  "site_code": "GV",
+  "severity": 2,
+  "raised_at": "2026-10-20T02:41:00Z",
+  "cleared_at": "2026-10-20T03:47:00Z"
+ },
+ {
+  "alarm_id": "ALM-000027",
+  "device_id": "HP1-OLT-01",
+  "site_code": "HP1",
+  "severity": 3,
+  "raised_at": "2026-10-19T21:31:00Z",
+  "cleared_at": "2026-10-20T01:32:00Z"
+ },
+ {
+  "alarm_id": "ALM-000012",
+  "device_id": "PE-OLT-01",
+  "site_code": "PE",
+  "severity": 2,
+  "raised_at": "2026-10-08T20:41:00Z",
+  "cleared_at": "2026-10-08T21:25:00Z"
+ },
+ {
+  "alarm_id": "ALM-000086",
+  "device_id": "NR-ONT-C4",
+  "site_code": "NR",
+  "severity": 4,
+  "raised_at": "2026-10-19T06:07:00Z",
+  "cleared_at": "2026-10-19T06:10:00Z"
+ },
+ {
+  "alarm_id": "ALM-000058",
+  "device_id": "HP2-ONT-C3",
+  "site_code": "HP2",
+  "severity": 3,
+  "raised_at": "2026-10-06T19:50:00Z",
+  "cleared_at": "2026-10-06T19:52:00Z"
+ },
+ {
+  "alarm_id": "ALM-000002",
+  "device_id": "HP1-OLT-01",
+  "site_code": "HP1",
+  "severity": 3,
+  "raised_at": "2026-10-02T08:24:00Z",
+  "cleared_at": "2026-10-02T09:58:00Z"
+ },
+ {
+  "alarm_id": "ALM-000028",
+  "device_id": "NR-OLT-01",
+  "site_code": "NR",
+  "severity": 2,
+  "raised_at": "2026-10-20T00:56:00Z",
+  "cleared_at": "2026-10-20T05:35:00Z"
+ },
+ {
+  "alarm_id": "ALM-000084",
+  "device_id": "HP1-ONT-C3",
+  "site_code": "HP1",
+  "severity": 4,
+  "raised_at": "2026-10-22T06:22:00Z",
+  "cleared_at": "2026-10-22T06:24:00Z"
+ },
+ {
+  "alarm_id": "ALM-000088",
+  "device_id": "PE-ONT-C2",
+  "site_code": "PE",
+  "severity": 3,
+  "raised_at": "2026-10-26T04:36:00Z",
+  "cleared_at": "2026-10-26T04:39:00Z"
+ },
+ {
+  "alarm_id": "ALM-000017",
+  "device_id": "CBP-OLT-01",
+  "site_code": "CBP",
+  "severity": 2,
+  "raised_at": "2026-10-13T07:08:00Z",
+  "cleared_at": "2026-10-13T08:13:00Z"
+ },
+ {
+  "alarm_id": "ALM-000038",
+  "device_id": "SR-OLT-01",
+  "site_code": "SR",
+  "severity": 2,
+  "raised_at": "2026-10-26T15:14:00Z",
+  "cleared_at": "2026-10-26T16:53:00Z"
+ },
+ {
+  "alarm_id": "ALM-000048",
+  "device_id": "GV-OLT-01",
+  "site_code": "GV",
+  "severity": 3,
+  "raised_at": "2026-10-31T23:13:00Z",
+  "cleared_at": null
+ },
+ {
+  "alarm_id": "ALM-000047",
+  "device_id": "NR-ONT-C4",
+  "site_code": "NR",
+  "severity": 2,
+  "raised_at": "2026-10-31T08:01:00Z",
+  "cleared_at": null
+ },
+ {
+  "alarm_id": "ALM-000051",
+  "device_id": "GV-ONT-C2",
+  "site_code": "GV",
+  "severity": 4,
+  "raised_at": "2026-10-16T21:07:00Z",
+  "cleared_at": "2026-10-16T21:09:00Z"
+ },
+ {
+  "alarm_id": "ALM-000054",
+  "device_id": "SR-ONT-C4",
+  "site_code": "SR",
+  "severity": 4,
+  "raised_at": "2026-10-27T09:17:00Z",
+  "cleared_at": "2026-10-27T09:20:00Z"
+ },
+ {
+  "alarm_id": "ALM-000078",
+  "device_id": "GV-ONT-C4",
+  "site_code": "GV",
+  "severity": 4,
+  "raised_at": "2026-10-23T05:39:00Z",
+  "cleared_at": "2026-10-23T05:43:00Z"
+ },
+ {
+  "alarm_id": "ALM-000045",
+  "device_id": "CBP-OLT-01",
+  "site_code": "CBP",
+  "severity": 1,
+  "raised_at": "2026-10-31T03:35:00Z",
+  "cleared_at": null
+ },
+ {
+  "alarm_id": "ALM-000074",
+  "device_id": "SR-ONT-C2",
+  "site_code": "SR",
+  "severity": 4,
+  "raised_at": "2026-10-09T04:34:00Z",
+  "cleared_at": "2026-10-09T04:38:00Z"
+ },
+ {
+  "alarm_id": "ALM-000070",
+  "device_id": "PE-ONT-C4",
+  "site_code": "PE",
+  "severity": 3,
+  "raised_at": "2026-11-01T02:56:00Z",
+  "cleared_at": "2026-11-01T02:57:00Z"
+ },
+ {
+  "alarm_id": "ALM-000010",
+  "device_id": "HP2-OLT-01",
+  "site_code": "HP2",
+  "severity": 1,
+  "raised_at": "2026-10-08T15:53:00Z",
+  "cleared_at": "2026-10-08T17:00:00Z"
+ },
+ {
+  "alarm_id": "ALM-000073",
+  "device_id": "HP1-ONT-C3",
+  "site_code": "HP1",
+  "severity": 3,
+  "raised_at": "2026-10-22T09:56:00Z",
+  "cleared_at": "2026-10-22T10:00:00Z"
+ },
+ {
+  "alarm_id": "ALM-000079",
+  "device_id": "GV-ONT-C4",
+  "site_code": "GV",
+  "severity": 3,
+  "raised_at": "2026-10-13T04:09:00Z",
+  "cleared_at": "2026-10-13T04:13:00Z"
+ },
+ {
+  "alarm_id": "ALM-000005",
+  "device_id": "NR-OLT-01",
+  "site_code": "NR",
+  "severity": 3,
+  "raised_at": "2026-10-03T03:41:00Z",
+  "cleared_at": "2026-10-03T10:21:00Z"
+ },
+ {
+  "alarm_id": "ALM-000001",
+  "device_id": "PE-OLT-01",
+  "site_code": "PE",
+  "severity": 1,
+  "raised_at": "2026-10-02T02:53:00Z",
+  "cleared_at": "2026-10-02T04:41:00Z"
+ },
+ {
+  "alarm_id": "ALM-000080",
+  "device_id": "SR-ONT-C1",
+  "site_code": "SR",
+  "severity": 4,
+  "raised_at": "2026-10-20T22:33:00Z",
+  "cleared_at": "2026-10-20T22:37:00Z"
+ },
+ {
+  "alarm_id": "ALM-000065",
+  "device_id": "RC-ONT-C1",
+  "site_code": "RC",
+  "severity": 3,
+  "raised_at": "2026-10-05T08:35:00Z",
+  "cleared_at": "2026-10-05T08:36:00Z"
+ },
+ {
+  "alarm_id": "ALM-000009",
+  "device_id": "HP2-ONT-C3",
+  "site_code": "HP2",
+  "severity": 3,
+  "raised_at": "2026-10-04T19:53:00Z",
+  "cleared_at": "2026-10-04T20:50:00Z"
+ },
+ {
+  "alarm_id": "ALM-000087",
+  "device_id": "RC-ONT-C1",
+  "site_code": "RC",
+  "severity": 4,
+  "raised_at": "2026-10-22T13:38:00Z",
+  "cleared_at": "2026-10-22T13:42:00Z"
+ },
+ {
+  "alarm_id": "ALM-000052",
+  "device_id": "HP2-ONT-C3",
+  "site_code": "HP2",
+  "severity": 4,
+  "raised_at": "2026-10-06T18:16:00Z",
+  "cleared_at": "2026-10-06T18:17:00Z"
+ },
+ {
+  "alarm_id": "ALM-000016",
+  "device_id": "SR-OLT-01",
+  "site_code": "SR",
+  "severity": 2,
+  "raised_at": "2026-10-12T16:52:00Z",
+  "cleared_at": "2026-10-13T06:46:00Z"
+ },
+ {
+  "alarm_id": "ALM-000089",
+  "device_id": "SR-ONT-C1",
+  "site_code": "SR",
+  "severity": 4,
+  "raised_at": "2026-10-08T17:27:00Z",
+  "cleared_at": "2026-10-08T17:31:00Z"
+ },
+ {
+  "alarm_id": "ALM-000064",
+  "device_id": "SR-ONT-C2",
+  "site_code": "SR",
+  "severity": 3,
+  "raised_at": "2026-10-28T00:03:00Z",
+  "cleared_at": "2026-10-28T00:06:00Z"
+ },
+ {
+  "alarm_id": "ALM-000068",
+  "device_id": "HP1-ONT-C4",
+  "site_code": "HP1",
+  "severity": 3,
+  "raised_at": "2026-10-18T13:13:00Z",
+  "cleared_at": "2026-10-18T13:15:00Z"
+ },
+ {
+  "alarm_id": "ALM-000023",
+  "device_id": "PE-OLT-01",
+  "site_code": "PE",
+  "severity": 3,
+  "raised_at": "2026-10-16T08:21:00Z",
+  "cleared_at": "2026-10-16T15:50:00Z"
+ },
+ {
+  "alarm_id": "ALM-000066",
+  "device_id": "GV-ONT-C1",
+  "site_code": "GV",
+  "severity": 4,
+  "raised_at": "2026-10-22T05:25:00Z",
+  "cleared_at": "2026-10-22T05:29:00Z"
+ },
+ {
+  "alarm_id": "ALM-000053",
+  "device_id": "PE-ONT-C2",
+  "site_code": "PE",
+  "severity": 4,
+  "raised_at": "2026-10-06T22:21:00Z",
+  "cleared_at": "2026-10-06T22:25:00Z"
+ },
+ {
+  "alarm_id": "ALM-000004",
+  "device_id": "CBP-OLT-01",
+  "site_code": "CBP",
+  "severity": 2,
+  "raised_at": "2026-10-02T15:27:00Z",
+  "cleared_at": "2026-10-02T18:34:00Z"
+ },
+ {
+  "alarm_id": "ALM-000043",
+  "device_id": "PE-ONT-C2",
+  "site_code": "PE",
+  "severity": 1,
+  "raised_at": "2026-10-29T00:18:00Z",
+  "cleared_at": "2026-10-29T14:57:00Z"
+ },
+ {
+  "alarm_id": "ALM-000032",
+  "device_id": "NR-OLT-01",
+  "site_code": "NR",
+  "severity": 2,
+  "raised_at": "2026-10-22T02:34:00Z",
+  "cleared_at": "2026-10-22T03:10:00Z"
+ },
+ {
+  "alarm_id": "ALM-000071",
+  "device_id": "RC-ONT-C2",
+  "site_code": "RC",
+  "severity": 3,
+  "raised_at": "2026-10-02T03:53:00Z",
+  "cleared_at": "2026-10-02T03:55:00Z"
+ },
+ {
+  "alarm_id": "ALM-000075",
+  "device_id": "PE-ONT-C4",
+  "site_code": "PE",
+  "severity": 3,
+  "raised_at": "2026-10-10T07:22:00Z",
+  "cleared_at": "2026-10-10T07:24:00Z"
+ },
+ {
+  "alarm_id": "ALM-000044",
+  "device_id": "CBP-OLT-01",
+  "site_code": "CBP",
+  "severity": 1,
+  "raised_at": "2026-10-30T23:29:00Z",
+  "cleared_at": "2026-10-31T00:59:00Z"
+ },
+ {
+  "alarm_id": "ALM-000025",
+  "device_id": "HP2-OLT-01",
+  "site_code": "HP2",
+  "severity": 3,
+  "raised_at": "2026-10-19T10:11:00Z",
+  "cleared_at": "2026-10-19T19:01:00Z"
+ },
+ {
+  "alarm_id": "ALM-000002",
+  "device_id": "HP1-OLT-01",
+  "site_code": "HP1",
+  "severity": 3,
+  "raised_at": "2026-10-02T08:24:00Z",
+  "cleared_at": "2026-10-02T09:58:00Z"
+ },
+ {
+  "alarm_id": "ALM-000013",
+  "device_id": "PE-ONT-C1",
+  "site_code": "PE",
+  "severity": 2,
+  "raised_at": "2026-10-08T20:46:00Z",
+  "cleared_at": "2026-10-08T21:19:00Z"
+ },
+ {
+  "alarm_id": "ALM-000035",
+  "device_id": "PE-ONT-C2",
+  "site_code": "PE",
+  "severity": 3,
+  "raised_at": "2026-10-23T01:37:00Z",
+  "cleared_at": "2026-10-23T03:21:00Z"
+ },
+ {
+  "alarm_id": "ALM-000055",
+  "device_id": "NR-ONT-C3",
+  "site_code": "NR",
+  "severity": 4,
+  "raised_at": "2026-10-17T18:13:00Z",
+  "cleared_at": "2026-10-17T18:17:00Z"
+ },
+ {
+  "alarm_id": "ALM-000018",
+  "device_id": "CBP-OLT-01",
+  "site_code": "CBP",
+  "severity": 2,
+  "raised_at": "2026-10-13T10:02:00Z",
+  "cleared_at": "2026-10-13T11:08:00Z"
+ },
+ {
+  "alarm_id": "ALM-000024",
+  "device_id": "PE-ONT-C3",
+  "site_code": "PE",
+  "severity": 3,
+  "raised_at": "2026-10-16T08:26:00Z",
+  "cleared_at": "2026-10-16T15:41:00Z"
+ },
+ {
+  "alarm_id": "ALM-000006",
+  "device_id": "CBP-OLT-01",
+  "site_code": "CBP",
+  "severity": 2,
+  "raised_at": "2026-10-03T11:00:00Z",
+  "cleared_at": "2026-10-03T13:54:00Z"
+ },
+ {
+  "alarm_id": "ALM-000019",
+  "device_id": "CBP-OLT-01",
+  "site_code": "CBP",
+  "severity": 2,
+  "raised_at": "2026-10-13T17:26:00Z",
+  "cleared_at": "2026-10-13T18:07:00Z"
+ },
+ {
+  "alarm_id": "ALM-000083",
+  "device_id": "HP2-ONT-C1",
+  "site_code": "HP2",
+  "severity": 4,
+  "raised_at": "2026-10-16T16:26:00Z",
+  "cleared_at": "2026-10-16T16:29:00Z"
+ },
+ {
+  "alarm_id": "ALM-000062",
+  "device_id": "GV-ONT-C4",
+  "site_code": "GV",
+  "severity": 4,
+  "raised_at": "2026-10-09T19:15:00Z",
+  "cleared_at": "2026-10-09T19:16:00Z"
+ },
+ {
+  "alarm_id": "ALM-000022",
+  "device_id": "HP1-OLT-01",
+  "site_code": "HP1",
+  "severity": 2,
+  "raised_at": "2026-10-15T17:50:00Z",
+  "cleared_at": "2026-10-15T19:31:00Z"
+ },
+ {
+  "alarm_id": "ALM-000034",
+  "device_id": "PE-OLT-01",
+  "site_code": "PE",
+  "severity": 3,
+  "raised_at": "2026-10-23T01:30:00Z",
+  "cleared_at": "2026-10-23T03:25:00Z"
+ },
+ {
+  "alarm_id": "ALM-000003",
+  "device_id": "HP1-ONT-C2",
+  "site_code": "HP1",
+  "severity": 3,
+  "raised_at": "2026-10-02T08:28:00Z",
+  "cleared_at": "2026-10-02T09:57:00Z"
+ },
+ {
+  "alarm_id": "ALM-000028",
+  "device_id": "NR-OLT-01",
+  "site_code": "NR",
+  "severity": 2,
+  "raised_at": "2026-10-20T00:56:00Z",
+  "cleared_at": "2026-10-20T05:35:00Z"
+ },
+ {
+  "alarm_id": "ALM-000041",
+  "device_id": "CBP-OLT-01",
+  "site_code": "CBP",
+  "severity": 3,
+  "raised_at": "2026-10-28T18:06:00Z",
+  "cleared_at": "2026-10-28T18:51:00Z"
+ },
+ {
+  "alarm_id": "ALM-000067",
+  "device_id": "GV-ONT-C4",
+  "site_code": "GV",
+  "severity": 3,
+  "raised_at": "2026-10-30T06:47:00Z",
+  "cleared_at": "2026-10-30T06:48:00Z"
+ },
+ {
+  "alarm_id": "ALM-000057",
+  "device_id": "PE-ONT-C4",
+  "site_code": "PE",
+  "severity": 4,
+  "raised_at": "2026-10-04T20:10:00Z",
+  "cleared_at": "2026-10-04T20:11:00Z"
+ },
+ {
+  "alarm_id": "ALM-000031",
+  "device_id": "PE-OLT-01",
+  "site_code": "PE",
+  "severity": 3,
+  "raised_at": "2026-10-21T16:36:00Z",
+  "cleared_at": "2026-10-21T20:19:00Z"
+ },
+ {
+  "alarm_id": "ALM-000061",
+  "device_id": "NR-ONT-C1",
+  "site_code": "NR",
+  "severity": 3,
+  "raised_at": "2026-10-15T22:59:00Z",
+  "cleared_at": "2026-10-15T23:00:00Z"
+ },
+ {
+  "alarm_id": "ALM-000056",
+  "device_id": "PE-ONT-C3",
+  "site_code": "PE",
+  "severity": 4,
+  "raised_at": "2026-10-08T08:41:00Z",
+  "cleared_at": "2026-10-08T08:45:00Z"
+ },
+ {
+  "alarm_id": "ALM-000059",
+  "device_id": "RC-ONT-C3",
+  "site_code": "RC",
+  "severity": 3,
+  "raised_at": "2026-10-10T00:28:00Z",
+  "cleared_at": "2026-10-10T00:32:00Z"
+ },
+ {
+  "alarm_id": "ALM-000026",
+  "device_id": "SR-OLT-01",
+  "site_code": "SR",
+  "severity": 3,
+  "raised_at": "2026-10-19T15:52:00Z",
+  "cleared_at": "2026-10-19T21:21:00Z"
+ },
+ {
+  "alarm_id": "ALM-000049",
+  "device_id": "HP1-OLT-01",
+  "site_code": "HP1",
+  "severity": 3,
+  "raised_at": "2026-11-01T05:35:00Z",
+  "cleared_at": "2026-11-01T06:20:00Z"
+ },
+ {
+  "alarm_id": "ALM-000082",
+  "device_id": "RC-ONT-C4",
+  "site_code": "RC",
+  "severity": 4,
+  "raised_at": "2026-10-15T01:08:00Z",
+  "cleared_at": "2026-10-15T01:10:00Z"
+ },
+ {
+  "alarm_id": "ALM-000033",
+  "device_id": "HP2-OLT-01",
+  "site_code": "HP2",
+  "severity": 2,
+  "raised_at": "2026-10-22T06:38:00Z",
+  "cleared_at": "2026-10-22T07:42:00Z"
+ },
+ {
+  "alarm_id": "ALM-000020",
+  "device_id": "PE-OLT-01",
+  "site_code": "PE",
+  "severity": 3,
+  "raised_at": "2026-10-15T06:55:00Z",
+  "cleared_at": "2026-10-15T18:02:00Z"
+ },
+ {
+  "alarm_id": "ALM-000063",
+  "device_id": "HP2-ONT-C1",
+  "site_code": "HP2",
+  "severity": 3,
+  "raised_at": "2026-10-26T19:23:00Z",
+  "cleared_at": "2026-10-26T19:25:00Z"
+ },
+ {
+  "alarm_id": "ALM-000085",
+  "device_id": "HP2-ONT-C2",
+  "site_code": "HP2",
+  "severity": 4,
+  "raised_at": "2026-10-18T15:50:00Z",
+  "cleared_at": "2026-10-18T15:52:00Z"
+ },
+ {
+  "alarm_id": "ALM-000077",
+  "device_id": "HP2-ONT-C3",
+  "site_code": "HP2",
+  "severity": 3,
+  "raised_at": "2026-10-09T18:54:00Z",
+  "cleared_at": "2026-10-09T18:57:00Z"
+ }
+]

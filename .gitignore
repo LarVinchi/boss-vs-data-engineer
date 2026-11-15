@@ -1,0 +1,21 @@
+# virtual environments
+.venv/
+venv/
+
+# python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# pipeline output (a sample lives in each week's example_output/)
+output/
+
+# secrets: never commit these
+.env
+*.key
+
+# operating system and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

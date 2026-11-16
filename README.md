@@ -16,7 +16,7 @@ No requirements document. Data in three different places. Records that disagree 
 
 | Week | The boss says | Focus | Status |
 |---|---|---|---|
-| [1](week-01-fibre-incidents/) | "A report on incidents, locations, downtime and impacted customers, by tomorrow." | Python and SQL-style logic: clean, reconcile, validate, test | Done |
+| [1](week-01-fibre-incidents/) | "A report on incidents, locations, downtime and impacted customers, by tomorrow." | Python and SQL-style logic: an ETL pipeline that cleans, reconciles, validates and tests | Done |
 | 2 | "Show me where they happened." | PostgreSQL and PostGIS | Planned |
 | 3 | "It only works on your laptop." | Docker | Planned |
 | 4 | "Run it every morning without you." | Apache Airflow | Planned |

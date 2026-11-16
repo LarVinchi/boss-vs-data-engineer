@@ -20,6 +20,7 @@ No requirements document. Data in three different places. Records that disagree 
 - How to combine two sources that describe the same event, without counting it twice
 - Why downtime must be calculated carefully, and how overlapping alarms inflate it
 - How to prove your pipeline is right when you know the answer (and why that is a luxury real projects rarely have)
+- What ETL and ELT mean, and which one this project is
 
 ## Table of contents
 1. [The data](#1-the-data)
@@ -89,22 +90,57 @@ The incident count (49 vs 46) looks close, but only because errors in opposite d
 
 ## 3. How it works (the big picture)
 
-Week 1 has no servers, containers or cloud services yet, so there is no infrastructure diagram. These two diagrams show the *logic*: how the data flows, and how several records become one incident. Real architecture diagrams arrive from Week 3, once there are services to draw.
+Week 1 has no servers, containers or cloud services yet, so there is no infrastructure diagram. These diagrams show the *logic*: how the data flows, and how several records become one incident. Real architecture diagrams arrive from Week 3, once there are services to draw.
+
+### This is an ETL pipeline
+
+**ETL** means **E**xtract, **T**ransform, **L**oad: pull the data out of its sources, clean and combine it in your own code, and only then load the result somewhere. The boxes below mark each stage. Everything messy is fixed *before* the data lands anywhere, which is what makes this ETL rather than ELT.
 
 ```mermaid
 flowchart LR
-    T["NOC tickets (CSV)<br/>typed by people"] --> X
-    A["Monitoring alarms (JSON)<br/>raised by machines"] --> X
-    C["Customer list (CSV)"] --> X
-    R["Site reference (CSV)<br/>names and aliases"] --> X
-    X["1. EXTRACT<br/>read the files"] --> D["2. DEDUPE<br/>repeated exports count once"]
-    D --> S["3. STANDARDIZE + VALIDATE<br/>one time zone, one set of names"]
-    S -->|"cannot be trusted"| J[("rejected_records.csv<br/>record + reason")]
-    S --> RC["4. RECONCILE<br/>alarms + tickets = one incident"]
-    RC --> O["5. REPORT<br/>downtime, impacted customers"]
-    O --> I[("incident_report.csv")]
-    O --> SM[("summary.md and summary.json")]
+    subgraph SRC["SOURCES: raw and messy"]
+        T["NOC tickets (CSV)<br/>typed by people"]
+        A["Monitoring alarms (JSON)<br/>raised by machines"]
+        C["Customer list (CSV)"]
+        R["Site reference (CSV)<br/>names and aliases"]
+    end
+    subgraph EXT["E = EXTRACT"]
+        X["1. Read the files"]
+    end
+    subgraph TRN["T = TRANSFORM: done in Python, before anything is loaded"]
+        D["2. Dedupe<br/>repeated exports count once"]
+        S["3. Standardize + validate<br/>one time zone, one set of names"]
+        RC["4. Reconcile<br/>alarms + tickets = one incident"]
+        J[("rejected_records.csv<br/>record + reason")]
+        D --> S
+        S --> RC
+        S -->|"cannot be trusted"| J
+    end
+    subgraph LD["L = LOAD: write the clean result"]
+        O["5. Report<br/>downtime, impacted customers"]
+        I[("incident_report.csv")]
+        SM[("summary.md and summary.json")]
+        O --> I
+        O --> SM
+    end
+    T --> X
+    A --> X
+    C --> X
+    R --> X
+    X --> D
+    RC --> O
 ```
+
+### ETL vs ELT in one table
+
+| | ETL (this project) | ELT |
+|---|---|---|
+| Order | Extract, then Transform, then Load | Extract, then Load, then Transform |
+| Where the cleaning happens | In your code, before loading | Inside the destination (usually a database or data warehouse) |
+| Raw data kept in the destination? | No: only the cleaned result is loaded | Yes: raw data lands first, so you can re-transform it later |
+| A good fit when | The data is small, or must be cleaned before it is stored | You have a database or warehouse powerful enough to do the work |
+
+In Week 1 the destination is just report files, so ETL is the natural choice. Week 2 introduces a database, which opens the door to ELT: load the raw records first, then transform them inside the database.
 
 ### How several records become one incident
 
@@ -120,10 +156,17 @@ flowchart TD
 ### Text version (if your viewer does not render diagrams)
 
 ```
-tickets + alarms + customers + site names
-   -> extract -> dedupe -> standardize/validate -> reconcile -> report
-                                   |
-                                   +-> rejected_records.csv (every rejection has a reason)
+SOURCES: tickets + alarms + customers + site names
+   |
+   v
+[ E: EXTRACT ]    1. read the files
+   |
+   v
+[ T: TRANSFORM ]  2. dedupe -> 3. standardize + validate -> 4. reconcile
+   |                                 |
+   |                                 +-> rejected_records.csv (every rejection has a reason)
+   v
+[ L: LOAD ]       5. write incident_report.csv, summary.md, summary.json
 ```
 
 ---
@@ -238,13 +281,13 @@ Every record the pipeline would not trust, with the reason. Nothing disappears s
 
 `pipeline.py` has five steps, in the order they run.
 
-### Step 1: EXTRACT (`read_csv`, `read_alarms`)
+### Step 1: EXTRACT (the E in ETL) (`read_csv`, `read_alarms`)
 Read the files. If the alarms file is not a list (for example an error message saved to disk), stop with a clear message instead of guessing.
 
-### Step 2: DEDUPE (`dedupe`)
+### Step 2: DEDUPE (Transform) (`dedupe`)
 Systems often export the same record twice. This step keeps the first copy of each ticket and alarm id and counts the rest. If a repeated id has *different* content, it is counted as a conflict and reported, because that needs a human.
 
-### Step 3: STANDARDIZE and VALIDATE (`standardize_ticket`, `standardize_alarm`, `standardize_customer`)
+### Step 3: STANDARDIZE and VALIDATE (Transform) (`standardize_ticket`, `standardize_alarm`, `standardize_customer`)
 Make everything comparable.
 - **Time zones.** Tickets are typed in local time (UTC+1) in three formats: `2026-10-13 08:27`, `13/10/2026 08:27`, `13 Oct 2026 8:27 AM`. Alarms are UTC. Everything becomes UTC. Slash dates are read day-first (an assumption you should always confirm).
 - **Location names.** Every name is lower-cased and stripped of punctuation, then looked up in the alias table. `"  HARBOUR PT. PHASE 1 "` and `"hp1"` both become `HP1`. A name that is *not* in the table is rejected rather than guessed.
@@ -252,7 +295,7 @@ Make everything comparable.
 - **Causes.** Free text is grouped (`"FIBRE CUT - third party excavation"` becomes `Fibre cut`).
 - **Validation.** Missing ids, missing or unknown locations, unreadable times, and alarms that clear before they start are rejected with a reason. A ticket that closes before it opens is flagged, and is used only if an alarm can confirm the times.
 
-### Step 4: RECONCILE (`drop_transient_alarms`, `cluster_alarms`, `attach_tickets`, `ticket_only_incidents`, `finish_incident`)
+### Step 4: RECONCILE (Transform) (`drop_transient_alarms`, `cluster_alarms`, `attach_tickets`, `ticket_only_incidents`, `finish_incident`)
 The heart of the project: deciding what counts as *one* incident.
 1. **Ignore blips.** Alarms shorter than 5 minutes (or severity 4) are noise.
 2. **Merge alarms.** Alarms at the same location that overlap, or sit within 5 minutes of each other, are one outage seen by several devices. Downtime comes from the merged window, so it is never double counted.
@@ -261,7 +304,7 @@ The heart of the project: deciding what counts as *one* incident.
 5. **Pick the times.** Machine alarm times win over typed ticket times. Ongoing outages are measured to the cut-off.
 6. **Count impacted customers** from the customer list: those connected at that location on the day the outage started (not the free-text number in the ticket).
 
-### Step 5: REPORT (`summarize`, `write_markdown`, `run`)
+### Step 5: REPORT (the L in ETL) (`summarize`, `write_markdown`, `run`)
 Number the incidents in time order, write the CSV, the summary, and the rejects file, and log a one-line result.
 
 ---
@@ -373,6 +416,8 @@ This is the plan as it stands. It may change as the series goes.
 | **Alarm** | An automatic message from monitoring that something is wrong |
 | **Ticket** | A record a person writes about a problem |
 | **UTC and local time** | UTC is the world's reference clock; local time is UTC plus an offset |
+| **ETL** | Extract, Transform, Load: clean the data in your own code before loading it into its destination |
+| **ELT** | Extract, Load, Transform: load the raw data first, then clean it inside the destination |
 | **Standardize** | Make different spellings and formats look the same |
 | **Validate** | Check that data meets rules before trusting it |
 | **Dedupe** | Remove repeats |
